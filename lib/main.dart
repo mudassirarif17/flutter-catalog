@@ -1,7 +1,9 @@
-import 'package:catalog/login_page.dart';
+
+import 'package:catalog/utils/routes.dart';
 import 'package:flutter/material.dart';
-import 'home_page1.dart';
-import 'home_page.dart';
+import './pages/home_page.dart';
+import './pages/home_page1.dart';
+import './pages/login_page.dart';
 
 void main(){
   runApp(MyApp());
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // home: HomePage1(),
       // home : HomePage(),
-      home : LoginPage(),
+      // home : LoginPage(),
      themeMode: ThemeMode.dark,
      debugShowCheckedModeBanner: false,
       theme : ThemeData(primarySwatch: Colors.deepPurple,
@@ -22,6 +24,15 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
+      routes: {
+        // Previous lecture
+        // "/" : (context) => LoginPage(),
+        // "/homepage" : (context) => HomePage(),
+
+        // Day 5
+        MyRoutes.loginRoute : (context) => LoginPage(),
+        MyRoutes.homeRoute : (context) => HomePage(),
+      },
     );
   }
 }
