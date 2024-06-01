@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       // home : HomePage(),
       home : LoginPage(),
      themeMode: ThemeMode.dark,
+     debugShowCheckedModeBanner: false,
       theme : ThemeData(primarySwatch: Colors.deepPurple,
       ),
       darkTheme: ThemeData(
